@@ -1,9 +1,15 @@
+// Hooks
 //import { useState } from 'react'
 
-function App() {
+// React Router
+import { RouterProvider } from "react-router-dom";
 
+// Rotas
+import { router } from "./routes";
+
+function App() {
   return (
-    "Teste"
+    <RouterProvider router={router} />
   )
 }
 
