@@ -10,24 +10,29 @@ import { Detail } from "./pages/detail";
 import { Layout } from "./components/layout";
 
 // Rotas
-const router = createBrowserRouter ([
+const router = createBrowserRouter (
+  [
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "*",
+          element: <Notfound />
+        },
+        {
+          path: "/detail/:cripto",
+          element: <Detail />
+        }
+      ]
+    }
+  ],
   {
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />
-      },
-      {
-        path: "*",
-        element: <Notfound />
-      },
-      {
-        path: "/detail/:cripto",
-        element: <Detail />
-      }
-    ]
+    basename: "/DevCurrency"
   }
-])
+);
 
 export { router };
