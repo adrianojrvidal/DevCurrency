@@ -19,11 +19,11 @@ const router = createBrowserRouter ([
         element: <Home />
       },
       {
-        path: "/notfound",
+        path: "*",
         element: <Notfound />
       },
       {
-        path: "/detail",
+        path: "/detail/:cripto",
         element: <Detail />
       }
     ]
